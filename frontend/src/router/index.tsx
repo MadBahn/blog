@@ -19,7 +19,16 @@ const routes = [
         element: loading(<Home />)
     },
     {
-
+//        后台
+        path: "/admin",
+        children: [
+            {
+                path: "/article",
+            },
+            {
+                path: "/category"
+            }
+        ]
     }
 ];
 

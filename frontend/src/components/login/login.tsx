@@ -1,12 +1,23 @@
 import React from 'react';
 
+import axios from 'axios';
+
 import {Button, Form, Input} from "antd";
 import { createFromIconfontCN } from "@ant-design/icons";
+
 
 function Login(props) {
 
     const onFinish = (values: any) => {
         console.log(values);
+
+        axios({
+            url: "/user/login",
+            method: "post",
+            data: {
+                login_form: values
+            }
+        }).then();
     }
 
     return (

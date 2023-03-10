@@ -1,10 +1,24 @@
 import React from 'react';
+
+import axios from "axios";
+
 import {Button, Form, Input} from "antd";
 
 function Register(props) {
 
     const onFinish = (values : any) => {
         console.log(values);
+
+//        异步请求
+        axios({
+            url: "/user/register",
+            method: "post",
+            data: {
+                register_form: values
+            }
+        }).then(res => {
+            console.log(res);
+        });
     };
 
     return (

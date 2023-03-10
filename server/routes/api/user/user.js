@@ -11,11 +11,13 @@ router.post("/post", (ctx, next) => {
 });
 
 router.post("/register", (ctx, next) => {
-
+    console.log(ctx.request.body.register_form);
+    ctx.body = "register";
 });
 
 router.post("/login", (ctx, next) => {
-
+    console.log(ctx.request.body.login_form);
+    ctx.body = "login";
 });
 
 router.post("/comment", (ctx, next) => {

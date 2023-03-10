@@ -14,7 +14,9 @@ function Home(props) {
 
     return (
          <div>
-             home
+            <div>
+                home
+            </div>
             <Login />
             <Register />
          </div>
